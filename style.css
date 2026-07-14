@@ -1,0 +1,544 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+body {
+    
+}
+
+.slidebar {
+    width: 18%;
+    height: 100vh;
+    background: #0F172A;
+    border-radius: 0 20px 20px 0;
+    position: fixed;
+    
+}
+.slidebar h2 {
+    color: #60A5FA;
+    margin: 40px 60px 20px 20px;
+}
+.slidebar h2:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #60A5FA;
+    margin-top: 15px;
+    border-radius: 4px;
+    
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 70px;
+    
+}
+ 
+ 
+li {
+    height: 50px;   
+}
+li img {
+    width: 20px;
+    filter: brightness(0) invert(1);
+    margin-right: 15px;
+    align-items: center;
+    
+}
+li {
+    text-decoration-line: none;
+    color: white;
+    padding: 10px 0;
+    font-size: 20px;
+    padding: 10px 60px 10px 20px;
+    border-left: 3px solid transparent;
+    margin-left: 10px;
+    transition: 0.5s;
+}
+li:hover {
+    border-left-color: #2563EB;
+    background: #1E293B;
+    padding: 10px 80px 10px 20px;
+    border-radius: 15px;
+}
+li:active {
+    border-left-color: #60A5FA;
+    background: #1E293B;
+}
+
+
+main {
+    width: 85%;
+    margin-left: 15%;
+    height: 100vh;
+    background: #f8FAFC;
+}
+.page {
+    top: 0;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+}
+
+#acceuil {
+    opacity: 1;
+    visibility: visible;
+    width: 82%;
+    margin-left: 5%;
+    padding: 20px;
+    background: #f8FAFC;
+    padding-bottom: 150px;
+    border-radius: 0 20px 20px 0; 
+    height: 100vh;
+}
+#acceuil h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-left: 45PX;
+    color: #0F172A;
+    }
+#acceuil h1:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #60A5FA;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+#acceuil p {
+    font-size: 18px;
+    color: #64748B;
+    margin-left: 45PX;
+    margin-top: 10px;
+}
+#acceuil .cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    text-align: center;
+    justify-content: center;
+    gap: 40px;
+}
+#acceuil .card {
+    width: 250px;
+    height: 300px;
+    max-height: 500px;
+    border-radius: 20px;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    transition: 0.5s;
+}
+#acceuil .card:hover {
+    transform: scale(1.05);
+    border-top: 5px solid #60A5FA;
+    box-shadow: 0 8px 35px rgba(14, 22, 41, 0.3);
+}
+
+#acceuil .card img {
+    width: 90px;
+    margin-top: 20PX;
+}
+#acceuil .card h3 {
+    color: #1a1a2e;
+    
+}
+#acceuil .card p {
+    color: #6c6c80;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 0;
+}
+#acceuil .foot {
+    margin-top: 100px;
+    padding: 10px;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 1px 10px #60A5FA;
+    
+}
+#acceuil .foot .boxs {
+    display: flex;
+    gap: 80px;
+}
+#acceuil .foot .boxs .box {
+    background: #f8FAFC;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+#cramer {
+    display: flex;
+    justify-content: center;
+    width: 82%;
+    margin-left: 4%;
+    background: #f8FAFC;
+    padding-top: 50px;
+}
+#cramer .calcul {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    background-color: white;
+    width: 75%;
+    gap: 15px;
+    border-radius: 30px;
+    box-shadow: 0 8px 35px rgba(14, 22, 41, 0.1);
+    padding-bottom: 50px;
+}
+
+#cramer .calcul .titre {
+    display: flex;
+    align-items: center;
+    gap: 560px;
+    padding-top: 20px;
+
+}
+#cramer .calcul .titre h2 span {
+    color: #2563EB;
+}
+#cramer .calcul .titre p {
+    background: #f8FAFC;
+    padding: 7px 15px;
+    border-radius: 20px;
+}
+#cramer .calcul .description {
+    background: #f8FAFC;
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 4px solid #2563EB;
+}
+#cramer .calcul .equations {
+    display: flex;
+    flex-direction: column;
+    background: #f8FAFC;
+    padding: 30px;
+    gap: 15px;
+    border-radius: 10px;
+}
+#cramer .calcul .equations .equation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+#cramer .calcul .equations .equation input{
+    width: 70px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+#cramer .calcul .equations .equation input:hover {
+    transform: scale(1.07);
+    box-shadow: 0 1px 5px #60A5FA;
+
+}
+
+#cramer .calcul .buttons{
+    display: grid;
+    grid-template-columns: repeat(3, 20%);
+    gap: 30px;
+    justify-content: center;
+}
+
+#cramer .calcul button {
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 1px 10px #60A5FA;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+#cramer .calcul button.first {
+background-color: #2f8bfc;
+color: white;
+transition: 0.5s;
+}
+#cramer .calcul button.first:hover {
+transform: scale(1.07);
+box-shadow: 0 1px 15px #60A5FA;
+background: #0F172A;
+border-left: 3px solid #2563EB;
+border-radius: 10px;
+
+}
+
+#cramer .calcul button.second {
+background-color: white;
+transition: 0.5s;
+
+}
+#cramer .calcul button.second:hover {
+    transform: scale(1.07);
+    border-radius: 10px;
+    box-shadow: 0 1px 15px #60A5FA;
+    border-left: 3px solid #2f8bfc;
+}
+#cramer .calcul button.third {
+background: #0F172A;
+transition: 0.5s;
+color: white;
+}
+
+#cramer .calcul button.third:hover {
+    transform: scale(1.07);
+    border-radius: 10px;
+    box-shadow: 0 1px 15px #60A5FA;
+    border-left: 3px solid #0F172A;
+    background-color: #2f8bfc;
+
+}
+#cramer .resultat {
+    display: none;
+}
+#cramer .resultat .card {
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#cramer .resultat .solution {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+#cramer .resultat .solution p {
+    background: #f8FAFC;
+    font-size: 1.5rem;
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+#cramer .resultat .texte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8FAFC;
+    padding: 10px;
+    border-radius: 15px;
+    
+}
+#X,#Z {
+    color: #2f8bfc;
+}
+#Y {
+    color: #0F172A;
+}
+#D {
+    font-size: 1.2rem;
+}
+#cramer .resultat .delta {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    background: #f8FAFC;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#image {
+    width: 82%;
+    margin-left: 4%;
+    height: 100vh;
+    background: #f8FAFC;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#image .cadre {
+    width: 80%;
+    height: 100vh;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 30px;
+    background: white;
+    padding: 10px 0;
+
+}
+#image .cadre .titre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+#image .cadre .titre h2 span {
+    color: #2f8bfc;
+}
+#image .cadre .titre p {
+    background: #f8FAFC;
+    padding: 7px 15px;
+    border-radius: 20px;
+}
+#image .cadre .photo {
+    margin: 0 auto;
+    width: 90%;
+    height: 80%;
+    background: #f8FAFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+#image .cadre .photo img {
+    width: 300px;
+    height: 300px;
+    border-radius: 5%;
+    transition: 0.5s;
+}
+#image .cadre .slider{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+#image .cadre .slider .valeur {
+    display: flex;
+    justify-content: space-between;
+}
+#image .cadre .slider .valeur span {
+    background: #f8FAFC;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+#image .cadre .slider .largeur ,#image .cadre .slider .longueur {
+    margin: 10px;
+}
+#image .cadre .slider input {
+    width: 25vw;
+}
+#image .cadre .buttons {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#image .cadre .buttons button {
+    padding: 10px 8%;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+#image .cadre .buttons .first {
+    color: white;
+    background: #2f8bfc;
+    box-shadow: 0 0 10px #0F172A;
+}
+#image .cadre .buttons .first:hover {
+    color: white;
+    background: #0F172A;
+    transform: translateY(-5px);
+    border-left: 4px solid #2f8bfc;
+    border-radius: 10px;
+}
+#image .cadre .buttons .second {
+    color: white;
+    background: #0F172A;
+    box-shadow: 0 0 10px #2f8bfc;
+}
+#image .cadre .buttons .second:hover {
+    background: #2f8bfc;
+    transform: translateY(-5px);
+    border-left: 4px solid #0F172A;
+    border-radius: 10px;
+}
+
+#panneau {
+    width: 78%;
+    margin-left: 6%;
+    height: 100vh;
+    background: #f8FAFC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#panneau .card {
+    width: 75%;
+    height: 80vh;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+
+}
+#panneau .card .texte {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+#panneau .card .texte span {
+    color: #2f8bfc;
+}
+#panneau .card .texte p {
+    background: #f8FAFC;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+#panneau .card .panneaux {
+    position: relative;
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: #f0f2f5;
+    margin-top: 20px;
+
+}
+#panneau .card .panneau {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+}
+
+#panneau .card .photo {
+    flex: 0 0 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffff;
+}
+#panneau .card .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#panneau .card .Next-prev {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+#panneau .card .Next-prev button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #2f8bfc;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#panneau .card .Next-prev button:hover {
+    background: #1a6fd1;
+}
+

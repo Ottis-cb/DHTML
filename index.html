@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJET DHTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slidebar">
+        <h2>DHTML</h2>
+        <ul>
+            <li onclick="afficherPage('acceuil')"><img src="/Icon/maison.png" alt="">Acceuil</li>
+            <li onclick="afficherPage('cramer')"><img src="/Icon/calculatrice.png" alt="">Cramer</li>
+            <li onclick="afficherPage('image')"><img src="/Icon/inserer-une-icone-dimage.png" alt="">Image</li>
+            <li onclick="afficherPage('panneau')"><img src="/Icon/moniteur.png" alt="">Panneau</a></li>
+            <li onclick="afficherPage('datatable')"><img src="/Icon/charte-de-croissance (1).png" alt=""> Datatable</li>
+        </ul>
+    </div>
+    <main>
+        <section id="acceuil" class="page">
+            <h1>Bienvenue</h1>
+            <p>Séléctionner une fonctionnalité dans le menu pour commencer.</p>
+            
+            <div class="cards">
+            
+                <div class="card" onclick="afficherPage('cramer')">
+                    <img src="/Icon/calculatrice (1).png" alt="">
+                    <h3>Cramer</h3>
+                    <p>Résolution d'un système de 3 équations.</p>
+                </div>
+            
+                <div class="card" onclick="afficherPage('image')">
+                    <img src="/Icon/images (1).png" alt="">
+                    <h3>Image</h3>
+                    <p>Redimensionnement dynamique.</p>
+                </div>
+                
+                <div class="card" onclick="afficherPage('panneau')">
+                    <img src="/Icon/pc.png" alt="">
+                    <h3>Panneau</h3>
+                    <p>Animation publicitaire.</p>
+                </div>
+            
+                <div class="card" onclick="afficherPage('datatable')">
+                    <img src="/Icon/charte-de-croissance (1).png" alt="">
+                    <h3>Datatable</h3>
+                    <p>Gestion des produits.</p>
+                </div>
+                
+                
+                </div>
+                <div class="foot">
+                    <h3>Téchnologie utilisées</h3>
+                    <div class="boxs">
+                        <div class="box">HTML5</div>
+                        <div class="box">CSS3</div>
+                        <div class="box">Bootstrap</div>
+                        <div class="box">JavaScript</div>
+                        <div class="box">jQuery</div>
+                        <div class="box">DataTables</div>
+                        <div class="box">Chartjs</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="cramer" class="page">
+            <div class="calcul">
+                    <div class="titre">
+                        <h2>Solveur <span>Cramer</span></h2>
+                        <p>Système 3x3</p>
+                    </div>
+                    <div class="description">
+                        Saisissez les coefficients des trois équation. Le système sera résolu par
+                        la <strong>règle de Cramer</strong>
+                    </div>
+                    <div class="equations">
+                       <div class="equation">
+                            <span class="label">L1</span>
+                            <input type="number" placeholder="a1" id="a1">
+                            <span class="var">x</span> 
+                            <span class="op">+</span>
+                            <input type="number" placeholder="b1" id="b1">
+                            <span class="var">y</span> 
+                            <span class="op">+</span>
+                            <input type="number" placeholder="c1" id="c1">
+                            <span class="var">z</span> 
+                            <span class="op">=</span>
+                            <input type="number" placeholder="d1" id="d1">
+                        </div>
+                        <div class="equation">
+                            <span class="label">L2</span>
+                            <input type="number" placeholder="a2" id="a2">
+                            <span class="var">x</span> 
+                            <span class="op">+</span>
+                            <input type="number" placeholder="b2" id="b2">
+                            <span class="var">y</span> 
+                            <span class="op">+</span>
+                            <input type="number" placeholder="c2" id="c2">
+                            <span class="var">z</span> 
+                            <span class="op">=</span>
+                            <input type="number" placeholder="d2" id="d2">
+                        </div>
+                        <div class="equation">
+                            <span class="label">L1</span>
+                            <input type="number" placeholder="a3" id="a3">
+                            <span class="var">x</span> 
+                            <span class="op">+</span>
+                            <input type="number" placeholder="b3" id="b3">
+                            <span class="var">y</span> 
+                            <span class="op">+</span>
+                            <input type="number" placeholder="c3" id="c3">
+                            <span class="var">z</span> 
+                            <span class="op">=</span>
+                            <input type="number" placeholder="d3" id="d3">
+                    </div> 
+                    </div>
+                    
+                    <div class="buttons">
+                        <button class="first" onclick="calculer()"><img src="" alt="">Calculer</button>
+                        <button class="second" onclick="reinitialiser()">Réinitialiser</button>
+                        <button class="third" onclick="exemple()">Exemple</button>
+                    </div>
+                
+                    <div class="resultat" id="resultat">
+                        <div class="card">
+                            
+                            <div class="solution">
+                                <p id="X"></p>
+                                <p id="Y"></p>
+                                <p id="Z"></p>
+                            </div>
+                            
+                            <div class="texte">
+                                <p id="message"></p>
+                                <p id="D"></p>
+                            </div>
+                                
+
+                            <div class="delta">
+                                <p id="DX"></p>
+                                <p id="DY"></p>
+                                <p id="DZ"></p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+
+        </section>
+        <section id="image" class="page">
+
+            <div class="cadre">
+
+                <div class="titre">
+                    <h2>Redimensionnement <span>de couche</span></h2>
+                    <p>Premium</p>
+                </div>
+    
+                <div class="photo">
+                    <img src="/IMG_20260708_124229.jpg" alt="" id="photo">
+                </div>
+
+                <div class="cards">
+                    
+                    <div class="slider">
+                        <div class="largeur" >
+                            <div class="valeur">
+                                <h4>LARGEUR</h4>
+                                <span id="largeurval"></span>
+                            </div>
+                            <input type="range" min="30" max="830" id="largeur" value="300" ><br>
+                        </div>
+                        
+                        <div class="longueur">
+                            <div class="valeur">
+                                <h4>HAUTEUR</h4>
+                                <span id="longueurval"></span>
+                            </div>
+                            <input type="range" min="30" max="500" id="longueur" value="300"><br>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="buttons">
+                    <button class="first">Redimensionner</button>
+                    <button class="second" onclick="reinitialiserImg()">Réinitialiser</button>
+                </div>
+            </div>
+           
+        </section>
+
+
+        <section id="panneau" class="page">
+           <div class="card">
+                <div class="texte">
+                    <h2>Panneau <span>publicitaire</span></h2>
+                    <p>Pas</p>
+                </div>
+                <div class="panneaux">
+                    <div class="panneau" id="publicite">
+                        <div class="photos">
+                            <img class="first" src="/IMG_20260708_124229.jpg" alt="">
+                        </div>
+                        <div class="photos">
+                            <img class="first" src="/IMG_20260708_124229.jpg" alt="">
+                        </div>
+                        <div class="photos">
+                            <img class="first" src="/IMG_20260708_124229.jpg" alt="">
+                        </div>
+                        <div class="photos">
+                            <img class="first" src="/IMG_20260708_124229.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="Next-prev">
+                    <button id="prev">◀</button>
+                    <button id="next">▶</button>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="datatable" class="page">
+
+        </section>
+
+    </main>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
