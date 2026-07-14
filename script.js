@@ -146,8 +146,8 @@ function reinitialiserImg() {
 // Panneaux publiciaire
 
 const publicite =document.getElementById('publicite');
-const photos = publicite.querySelectorAll('.photo');
-const total = photo.length;
+const photos = publicite.querySelectorAll('.photos');
+const total = photos.length;
 let index = 0;
 
 const texte = document.querySelector('#panneau .card .texte p');
@@ -167,10 +167,10 @@ function prev() {
     carousel();
 }
 
-document.getElementById('prev').addEventListener('click' ,prev());
-document.getElementById('next').addEventListener('click' ,next());
+document.getElementById('prev').addEventListener('click' ,prev);
+document.getElementById('next').addEventListener('click' ,next);
 
-let autoPlay = setInterval(next, 4000);
+let autoPlay = setInterval(next, 2000);
 carousel();
 
 
