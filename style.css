@@ -557,11 +557,11 @@ color: white;
     width: 78%;
     height: 80vh;
     background: white;
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
     padding: 15px;
     gap: 5%;
+
 }
 
 #datatable table,th,td {
@@ -573,21 +573,30 @@ color: white;
     text-align: center;
 }
 #datatable th,td{
-    padding: 10px;
+    height: 40px;
+    padding: 5px;
 }
-#datatable .gray{
+#datatable td input {
+    height: 100%;
+    border: none;
+}
+#datatable .gray,#datatable .gray input{
     background: #69798e;
 }
-#datatable .blue {
+
+#datatable .blue,#datatable .blue input {
     background: #60A5FA;
 }
-#datatable .green {
+#datatable .green,#datatable .green input {
     background: #c3cad7;
 }
 
 #datatable .statistique {
     background: #f8FAFC;
     height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #datatable .statistique .affichage {
@@ -609,4 +618,10 @@ color: white;
 #datatable .statistique .affichage .champ input{
     padding: 5px;
 
+}
+
+#datatable .statistique .graphe {
+    width: 45%;
+    height: 100%;
+    padding: 10px;
 }

@@ -185,6 +185,19 @@ let autoPlay = setInterval(next, 2000);
 carousel();
 
 
+//Section Datatable
+
+const quantite = document.getElementById('quantite');
+const prix = document.getElementById('prix');
+const montant = document.getElementById('montant');
+const valquant = quantite.value;
+const valprix = prix.value;
+const valmontant = montant.value;
+
+
+
+
+
 
 
 
