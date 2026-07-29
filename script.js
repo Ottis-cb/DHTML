@@ -214,7 +214,7 @@ for(let i= 1; i<lignes.length - 1 ;i++){
         montants = [];
         let totalQuantite = 0;
         let totalPrix = 0;
-        let toatalMontant = 0;
+        let totalMontant = 0;
 
 
         for(let i=1; i<lignes.length - 1 ;i++){
@@ -224,19 +224,21 @@ for(let i= 1; i<lignes.length - 1 ;i++){
 
             totalQuantite+= quantiteProduit;
             totalPrix+=prixProduit;
-            toatalMontant+=montantProduit;
-            if(prixProduits > 0){
-                prix.push(PrixProduits);
+            totalMontant+=montantProduit;
+            if(prixProduit > 0){
+                prix.push(prixProduit);
             }
-            if(montantProduits > 0){
-                montants.push(PrixProduits);
+            if(montantProduit > 0){
+                montants.push(montantProduit);
             }
         }
 
+        graphique.data.datasets[0].data = montants;
+        graphique.update();
         if(prix.length > 0) {
             let somme=0;
-            for(let i=0; i<lignes.length ;i++){
-                somme+=prix[i];
+            for(let i=0; i< prix.length ;i++){
+                somme += prix[i];
             }
             let moyenne = somme / prix.length;
             let minimum = Math.min(...prix);
@@ -254,6 +256,36 @@ for(let i= 1; i<lignes.length - 1 ;i++){
 
     }
 }
+
+
+const ctx =document.getElementById("monGraphe");
+const graphique = new Chart(ctx, {
+    type: "bar" ,
+    data: {
+        labels: ["Riz", "Manioc", "Sucre", "Patate"],
+        datasets: [{
+            label: "Montant (Ar)",
+            data: [0, 0, 0, 0],
+            backgroundColor : [
+                "#60A5FA",
+                "#34D399",
+                "#FBBF24",
+                "#F87171"
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+
+    }
+});
 
 
 
