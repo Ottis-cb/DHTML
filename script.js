@@ -127,7 +127,6 @@ function exemple(){
     document.getElementById('c3').value=1;
     document.getElementById('d3').value=3;
 }
-
 // Section Redimentionnement d'image
 const largeur = document.getElementById('largeur');
 const longueur = document.getElementById('longueur');
@@ -147,10 +146,10 @@ longueur.addEventListener("input" , function(){
 function reinitialiserImg() {
     photo.style.width ='';
     photo.style.height ='';
-    largeur.value = 300;
+    largeur.value = 400;
     largeurval.textContent = largeur.value +" px";
-    longueur.value = 300;
-    longueurval.textContent = largeur.value +" px";
+    longueur.value = 250;
+    longueurval.textContent = longueur.value +" px";
 
 }
 
@@ -198,10 +197,10 @@ for(let i= 1; i<lignes.length - 1 ;i++){
     let montantInput =lignes[i].querySelector(".montant input");
 
 
-    quantite.addEventListener("input" ,calculer);
-    prixInput.addEventListener("input" ,calculer);
+    quantite.addEventListener("input" ,calculer2);
+    prixInput.addEventListener("input" ,calculer2);
 
-    function calculer(){
+    function calculer2(){
         let qte= Number(quantite.value);
         let prix= Number(prixInput.value);
             let resultat= qte * prix;
