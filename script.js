@@ -1,5 +1,5 @@
 //Pour l'affichage de chaque section
-function afficherPage(id) {
+/*function afficherPage(id) {
     document.getElementById('acceuil').style.opacity ='0';
     document.getElementById('acceuil').style.visibility='hidden';
 
@@ -18,7 +18,18 @@ function afficherPage(id) {
     document.getElementById(id).style.opacity="1";
     document.getElementById(id).style.visibility="visible";
 }
+*/
+function afficherPage(id) {
+    $(".page").css({
+        opacity: 0,
+        visibility: "hidden"
+    });
 
+    $("#" + id).css({
+        opacity: 1,
+        visibility: "visible"
+    });
+}
 //Pour le résolution du système linéaire
 function calculer() {
     document.getElementById('resultat').style.display="block";

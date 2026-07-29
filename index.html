@@ -9,7 +9,7 @@
 <body>
     <div class="slidebar">
         <h2>DHTML</h2>
-        <ul>
+        <ul> 
             <li onclick="afficherPage('acceuil')"><img src="/Icon/maison.png" alt="">Acceuil</li>
             <li onclick="afficherPage('cramer')"><img src="/Icon/calculatrice.png" alt="">Cramer</li>
             <li onclick="afficherPage('image')"><img src="/Icon/inserer-une-icone-dimage.png" alt="">Image</li>
@@ -201,34 +201,34 @@
                 <div class="panneaux">
                     <div class="panneau" id="publicite">
                         <div class="photos">
-                            <img class="first" src="/images/pub1.jpg" alt="">
+                            <img class="first" src="/images/pub1.jpg" alt="Image du publicité1">
                         </div>
                         <div class="photos">
-                            <img class="first" src="/images/pub2.jpg" alt="">
+                            <img class="first" src="/images/pub2.jpg" alt="Image du publicité2">
                         </div>
                         <div class="photos">
-                            <img class="first" src="/images/pub3.jpg" alt="">
+                            <img class="first" src="/images/pub3.jpg" alt="Image du publicité3">
                         </div>
                         <div class="photos">
-                            <img class="first" src="/images/pub4.jpg" alt="">
+                            <img class="first" src="/images/pub4.jpg" alt="Image du publicité4">
                         </div>
                         <div class="photos">
-                            <img class="first" src="/images/pub5.jpg" alt="">
+                            <img class="first" src="/images/pub5.jpg" alt="Image du publicité5">
                         </div>
                         <div class="photos">
-                            <img class="first" src="/images/pub6.jpg" alt="">
+                            <img class="first" src="/images/pub6.jpg" alt="Image du publicité6">
                         </div>
                         <div class="photos">
-                            <img class="first" src="/images/pub7.jpg" alt="">
+                            <img class="first" src="/images/pub7.jpg" alt="Image du publicité7">
                         </div>
                         <div class="photos">
-                            <img class="first" src="/images/pub8.jpg" alt="">
+                            <img class="first" src="/images/pub8.jpg" alt="Image du publicité8">
                         </div>
                         <div class="photos">
-                            <img class="first" src="/images/pub9.jpg" alt="">
+                            <img class="first" src="/images/pub9.jpg" alt="Image du publicité9">
                         </div>
                         <div class="photos">
-                            <img class="first" src="/images/pub10.jpg" alt="">
+                            <img class="first" src="/images/pub10.jpg" alt="Image du publicité10">
                         </div>
                         
                     </div>
@@ -242,12 +242,69 @@
 
         </section>
         <section id="datatable" class="page">
+            <div class="tableau">
+                <table>
+                    <tr class="gray">
+                        <th>Designation</th>
+                        <th>Quantité</th>
+                        <th>Prix</th>
+                        <th>Montant</th>
+                    </tr>
+                    <tr class="blue">
+                        <td>Riz</td>
+                        <td>10</td>
+                        <td>4000 Ar</td>
+                        <td>40000 Ar</td>
+                    </tr>
+                    <tr class="green">
+                        <td>Manioc</td>
+                        <td>10</td>
+                        <td>4000 Ar</td>
+                        <td>40000 Ar</td>
+                    </tr>
+                    <tr class="blue">
+                        <td>Sucre</td>
+                        <td>10</td>
+                        <td>4000 Ar</td>
+                        <td>40000 Ar</td>
+                    </tr>
+                    <tr class="green">
+                        <td>Patate</td>
+                        <td>10</td>
+                        <td>4000 Ar</td>
+                        <td>40000 Ar</td>
+                    </tr>
+                    <tr class="gray">
+                        <td>Total</td>
+                        <td>10</td>
+                        <td>4000 Ar</td>
+                        <td>40000 Ar</td>
+                    </tr>
+                    
+                </table>
+                <div class="statistique">
+                    <div class="affichage">
+                        <div class="champ">
+                            <label for="">Prix moyen:</label>
+                            <input type="text" readonly>
+                        </div>
+                        <div class="champ">
+                            <label for="">Prix minimal:</label>
+                            <input type="text" readonly>
+                        </div>
+                        <div class="champ">
+                            <label for="">Prix maximal:</label>
+                            <input type="text" readonly>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
         </section>
 
     </main>
     
-
+    <script src="/js/jquery-4.0.0.min.js" ></script>
     <script src="script.js"></script>
 </body>
 </html>

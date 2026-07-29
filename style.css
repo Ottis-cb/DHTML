@@ -543,3 +543,70 @@ color: white;
     background: #1a6fd1;
 }
 
+#datatable {
+    width: 78%;
+    margin-left: 6%;
+    height: 100vh;
+    background: #f8FAFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#datatable .tableau {
+    width: 78%;
+    height: 80vh;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 5%;
+}
+
+#datatable table,th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#datatable tr {
+    text-align: center;
+}
+#datatable th,td{
+    padding: 10px;
+}
+#datatable .gray{
+    background: #69798e;
+}
+#datatable .blue {
+    background: #60A5FA;
+}
+#datatable .green {
+    background: #c3cad7;
+}
+
+#datatable .statistique {
+    background: #f8FAFC;
+    height: 30vh;
+}
+
+#datatable .statistique .affichage {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+    padding: 0 5%;
+}
+#datatable .statistique .affichage .champ {
+    display: flex;
+    align-items: center;
+    
+}
+
+    
+#datatable .statistique .affichage .champ input{
+    padding: 5px;
+
+}
