@@ -187,12 +187,73 @@ carousel();
 
 //Section Datatable
 
-const quantite = document.getElementById('quantite');
-const prix = document.getElementById('prix');
-const montant = document.getElementById('montant');
-const valquant = quantite.value;
-const valprix = prix.value;
-const valmontant = montant.value;
+let lignes = document.querySelectorAll("#datatable table tr");
+let prix= [];
+let montants = [];
+
+
+for(let i= 1; i<lignes.length - 1 ;i++){
+    let quantite =lignes[i].querySelector(".quantite input");
+    let prixInput =lignes[i].querySelector(".prix input");
+    let montantInput =lignes[i].querySelector(".montant input");
+
+
+    quantite.addEventListener("input" ,calculer);
+    prixInput.addEventListener("input" ,calculer);
+
+    function calculer(){
+        let qte= Number(quantite.value);
+        let prix= Number(prixInput.value);
+            let resultat= qte * prix;
+            montantInput.value = resultat;
+            statistiques();
+    }
+
+    function statistiques(){
+        prix = [];
+        montants = [];
+        let totalQuantite = 0;
+        let totalPrix = 0;
+        let toatalMontant = 0;
+
+
+        for(let i=1; i<lignes.length - 1 ;i++){
+            let montantProduit = Number(lignes[i].querySelector(".montant input").value);
+            let quantiteProduit = Number(lignes[i].querySelector(".quantite input").value);
+            let  prixProduit = Number(lignes[i].querySelector(".prix input").value);
+
+            totalQuantite+= quantiteProduit;
+            totalPrix+=prixProduit;
+            toatalMontant+=montantProduit;
+            if(prixProduits > 0){
+                prix.push(PrixProduits);
+            }
+            if(montantProduits > 0){
+                montants.push(PrixProduits);
+            }
+        }
+
+        if(prix.length > 0) {
+            let somme=0;
+            for(let i=0; i<lignes.length ;i++){
+                somme+=prix[i];
+            }
+            let moyenne = somme / prix.length;
+            let minimum = Math.min(...prix);
+            let maximum = Math.max(...prix);
+
+
+            document.querySelector(".moyenne").value = moyenne + "Ar";
+            document.querySelector(".minimum").value = minimum + " Ar";
+            document.querySelector(".maximum").value = maximum + " Ar";
+
+            document.querySelector(".totalQuantite").value = totalQuantite;
+            document.querySelector(".totalPrix").value = totalPrix;
+            document.querySelector(".totalMontant").value = totalMontant;
+        }
+
+    }
+}
 
 
 
