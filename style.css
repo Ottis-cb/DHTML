@@ -642,6 +642,7 @@ color: white;
 }
 
 #datatable .statistique {
+    width: 100%;
     background: #f8FAFC;
     height: 40vh;
     display: flex;
