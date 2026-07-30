@@ -5,15 +5,22 @@
 } 
 
 body {
-    height: 100vh;
+    min-height: 100vh;
 }
 
+.slides {
+    display: flex;
+}
 .slidebar {
-    width: 18%;
-    height: 100vh;
-    background: #0F172A;
-    border-radius: 0 20px 20px 0;
-    position: fixed;
+   width: 260px;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background: #0F172A;
+   z-index: 1000;
+   transition: .4s;
+   overflow-y: auto;
     
 }
 .slidebar h2 {
@@ -30,7 +37,15 @@ body {
     border-radius: 4px;
     
 }
-
+.hamburger {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    z-index: 2000;
+    display: none;
+}
 ul {
     list-style-type: none;
     margin-top: 70px;
@@ -71,10 +86,12 @@ li:active {
 
 
 main {
-    width: 85%;
-    margin-left: 15%;
-    height: 100vh;
+    margin-left: 260px;
+    padding: 30px;
+    min-height: 100vh;
     background: #f8FAFC;
+    display: flex;
+    justify-content: center;
 }
 .page {
     top: 0;
@@ -87,9 +104,10 @@ main {
 #acceuil {
     opacity: 1;
     visibility: visible;
-    width: 78%;
-    height: 100vh;
-    margin-left: 5%;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 100vh;
     padding: 20px;
     background: #f8FAFC;
     padding-bottom: 150px;
@@ -99,7 +117,6 @@ main {
     font-size: 42px;
     font-weight: 700;
     margin-top: 10px;
-    margin-left: 45PX;
     color: #0F172A;
     }
 #acceuil h1:after {
@@ -114,19 +131,21 @@ main {
 #acceuil p {
     font-size: 18px;
     color: #64748B;
-    margin-left: 45PX;
     margin-top: 10px;
 }
 #acceuil .cards{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin-top: 60px;
     text-align: center;
     justify-content: center;
-    gap: 40px;
+    gap: 25px;
+    
 }
 #acceuil .card {
-    width: 250px;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
     height: 300px;
     max-height: 500px;
     border-radius: 20px;
@@ -166,7 +185,9 @@ main {
 }
 #acceuil .foot .boxs {
     display: flex;
-    gap: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 #acceuil .foot .boxs .box {
     background: #f8FAFC;
@@ -177,8 +198,11 @@ main {
 #cramer {
     display: flex;
     justify-content: center;
-    width: 78%;
-    margin-left: 4%;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 100vh;
+    padding: 20px;
     background: #f8FAFC;
     padding-top: 50px;
 }
@@ -188,6 +212,7 @@ main {
     padding: 0 30px;
     background-color: white;
     width: 80%;
+    height: 80%;
     gap: 15px;
     border-radius: 30px;
     box-shadow: 0 8px 35px rgba(14, 22, 41, 0.1);
@@ -197,7 +222,7 @@ main {
 #cramer .calcul .titre {
     display: flex;
     align-items: center;
-    gap: 560px;
+    justify-content: space-between;
     padding-top: 20px;
 
 }
@@ -219,6 +244,7 @@ main {
 #cramer .calcul .equations {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     background: #f8FAFC;
     padding: 30px;
     gap: 15px;
@@ -226,12 +252,15 @@ main {
 }
 #cramer .calcul .equations .equation {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 15px;
+    justify-content: center;
+    gap: 10px;
 
 }
 #cramer .calcul .equations .equation input{
-    width: 70px;
+    width: 65px;
+    max-width: 100%;
     height: 40px;
     border: none;
     border-radius: 5px;
@@ -245,7 +274,7 @@ main {
 
 #cramer .calcul .buttons{
     display: grid;
-    grid-template-columns: repeat(3, 20%);
+    grid-template-columns: repeat(auto-fit,minmax(180px, 1fr));
     gap: 30px;
     justify-content: center;
 }
@@ -310,8 +339,9 @@ color: white;
 }
 #cramer .resultat .solution {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     margin: 20px 0;
 }
 #cramer .resultat .solution p {
@@ -341,16 +371,19 @@ color: white;
 #cramer .resultat .delta {
     display: flex;
     justify-content: center;
-    gap: 100px;
+    gap: 25px;
+    flex-wrap: wrap;
     background: #f8FAFC;
     padding: 15px;
     border-radius: 10px;
 }
 
 #image {
-    width: 78%;
-    margin-left: 4%;
-    height: 100vh;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 100vh;
+    padding: 20px;
     background: #f8FAFC;
     display: flex;
     justify-content: center;
@@ -358,8 +391,10 @@ color: white;
 }
 
 #image .cadre {
-    width: 80%;
-    height: 100vh;
+    width: 100%;
+    max-width: 1000px;
+    height: 95vh;
+    min-height: auto;
     margin: 1%;
     display: flex;
     flex-direction: column;
@@ -394,15 +429,17 @@ color: white;
     border-radius: 20px;
 }
 #image .cadre .photo img {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 250px;
+    display: block;
     border-radius: 5%;
     transition: 0.5s;
 }
 #image .cadre .slider{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 5%;
+    gap: 20px;
 }
 
 #image .cadre .slider .valeur {
@@ -422,7 +459,8 @@ color: white;
 }
 #image .cadre .buttons {
     display: flex;
-    gap: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
     margin-bottom: 20px;
 }
@@ -457,9 +495,11 @@ color: white;
 }
 
 #panneau {
-    width: 78%;
-    margin-left: 6%;
-    height: 100vh;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 100vh;
+    padding: 20px;
     background: #f8FAFC;
     display: flex;
     flex-direction: column;
@@ -468,8 +508,9 @@ color: white;
 }
 
 #panneau .card {
-    width: 75%;
-    height: 80vh;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
     background: white;
     border-radius: 20px;
     display: flex;
@@ -494,7 +535,7 @@ color: white;
 #panneau .card .panneaux {
     position: relative;
     width: 100%;
-    height: 95%;
+    height: 500px;
     overflow: hidden;
     border-radius: 16px;
     background-color: #f0f2f5;
@@ -538,15 +579,19 @@ color: white;
     font-weight: bold;
     cursor: pointer;
     transition: 0.2s;
+    display: flex;
+    flex-wrap: wrap;
 }
 #panneau .card .Next-prev button:hover {
     background: #1a6fd1;
 }
 
 #datatable {
-    width: 78%;
-    margin-left: 6%;
-    height: 100vh;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 100vh;
+    padding: 20px;
     background: #f8FAFC;
     display: flex;
     justify-content: center;
@@ -561,9 +606,14 @@ color: white;
     flex-direction: column;
     padding: 15px;
     gap: 5%;
+    overflow-x: auto;
 
 }
 
+#datatable table {
+    min-width: 700px;
+    width: 100%;
+}
 #datatable table,th,td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -595,12 +645,14 @@ color: white;
     background: #f8FAFC;
     height: 40vh;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
     align-items: center;
 }
 
 #datatable .statistique .affichage {
-    width: 50%;
+    flex: 1;
+    max-width: 350px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -621,11 +673,70 @@ color: white;
 }
 
 #datatable .statistique .graphe {
-    width: 70%;
+    flex: 1;
+    max-width: 500px;
     height: 100%;
     padding: 10px;
 }
 #monGraphe {
     width: 100%;
     height: 100%;
+}
+
+@media (max-width:992px){
+    main {
+        margin-left: 0;
+        padding: 80px 15px 20px;
+    }
+    .slidebar .active {
+        left: 0;
+    }
+}
+@media (max-width:768px) {
+    .hamburger {
+        display: block;
+    }
+    #menu-btn button {
+        width: 100px;
+        height: 100px;
+    }
+    .slidebar {
+        position: fixed;
+        left: -260px;
+        width: 250px;
+        transition: .4s;
+    }
+    .mobile-menu {
+        left: 0;
+    }
+    .slidebar .active {
+        left: 0;
+    }
+    .buttons {
+        grid-template-columns: 1fr;
+    }
+    .titre {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .statistique {
+        flex-direction: column;
+    }
+  
+}
+@media (max-width: 576px){
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .equation {
+        flex-direction: column;
+        align-items: center;
+    }
+    .solution {
+        flex-direction: column;
+    }
+    .delta {
+        flex-direction: column;
+    }
 }

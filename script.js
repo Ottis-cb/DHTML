@@ -19,6 +19,12 @@
     document.getElementById(id).style.visibility="visible";
 }
 */
+const hamburger = document.querySelector('.hamburger');
+const slidebar = document.querySelector(".slidebar");
+hamburger.addEventListener('click', ()=>{
+    slidebar.classList.toggle("mobile-menu");
+})
+
 function afficherPage(id) {
     $(".page").css({
         opacity: 0,
@@ -29,7 +35,8 @@ function afficherPage(id) {
         opacity: 1,
         visibility: "visible"
     });
-}
+} 
+    
 //Pour le résolution du système linéaire
 function calculer() {
     document.getElementById('resultat').style.display="block";
