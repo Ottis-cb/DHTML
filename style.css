@@ -13,7 +13,7 @@ body {
 }
 .slidebar {
    width: 260px;
-   height: 100vh;
+   min-height: 100vh;
    position: fixed;
    top: 0;
    left: 0;
@@ -112,15 +112,13 @@ main {
     max-width: 1200px;
     margin: auto;
     min-height: 100vh;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     background: #f8FAFC;
-    padding-bottom: 150px;
     border-radius: 0 20px 20px 0; 
 }
 #acceuil h1 {
     font-size: 42px;
     font-weight: 700;
-    margin-top: 10px;
     color: #0F172A;
     }
 #acceuil h1:after {
@@ -140,7 +138,7 @@ main {
 #acceuil .cards{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin-top: 60px;
+    margin-top: 30px;
     text-align: center;
     justify-content: center;
     gap: 25px;
@@ -179,7 +177,7 @@ main {
     margin-left: 0;
 }
 #acceuil .foot {
-    margin-top: 100px;
+    margin-top: 70px;
     padding: 10px;
     background: white;
     border-radius: 20px;
@@ -198,6 +196,26 @@ main {
     padding: 10px;
     border-radius: 10px;
     margin: 0 auto;
+}
+#acceuil .footer-page {
+    margin-top: 80px;
+    padding: 0 0 20px 0;
+    border-top: 2px solid #E2E8F0;
+}
+#acceuil .footer-page .footer-c {
+    text-align: center;
+    color: #64748B;
+}
+#acceuil .footer-page .footer-c p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+#acceuil .footer-page .footer-c strong {
+    color: #0F172A;
+}
+#acceuil .footer-page .footer-c .version {
+    font-size: 12px;
+    color: #94A3B8;
 }
 #cramer {
     display: flex;
