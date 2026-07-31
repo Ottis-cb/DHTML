@@ -1,30 +1,12 @@
-//Pour l'affichage de chaque section
-/*function afficherPage(id) {
-    document.getElementById('acceuil').style.opacity ='0';
-    document.getElementById('acceuil').style.visibility='hidden';
 
-    document.getElementById('cramer').style.opacity ='0';
-    document.getElementById('cramer').style.visibility='hidden';
-
-    document.getElementById('image').style.opacity ='0';
-    document.getElementById('image').style.visibility='hidden';
-
-    document.getElementById('panneau').style.opacity ='0';
-    document.getElementById('panneau').style.visibility='hidden';
-    
-    document.getElementById('datatable').style.opacity ='0';
-    document.getElementById('datatable').style.visibility='hidden';
-
-    document.getElementById(id).style.opacity="1";
-    document.getElementById(id).style.visibility="visible";
-}
-*/
+//Pour le menu hamburger sur mobile
 const hamburger = document.querySelector('.hamburger');
 const slidebar = document.querySelector(".slidebar");
 hamburger.addEventListener('click', ()=>{
     slidebar.classList.toggle("mobile-menu");
 })
 
+//Function permmettant d'afficher chaque section
 function afficherPage(id) {
     $(".page").css({
         opacity: 0,
@@ -101,6 +83,7 @@ function calculer() {
     document.getElementById('Z').innerHTML="Z = " + z.toFixed(6);
 
 }
+
 //Pour réinitialiser tout les valeurs du système
 function reinitialiser(){
     document.getElementById('resultat').style.display="none";
@@ -117,6 +100,7 @@ function reinitialiser(){
     document.getElementById('c3').value=" ";
     document.getElementById('d3').value=" ";
 }
+
 //Pour ajouter un exemple
 function exemple(){
     document.getElementById('a1').value=1;
@@ -134,6 +118,7 @@ function exemple(){
     document.getElementById('c3').value=1;
     document.getElementById('d3').value=3;
 }
+
 // Section Redimentionnement d'image
 const largeur = document.getElementById('largeur');
 const longueur = document.getElementById('longueur');
@@ -161,7 +146,6 @@ function reinitialiserImg() {
 }
 
 // Panneaux publiciaire
-
 const publicite =document.getElementById('publicite');
 const photos = publicite.querySelectorAll('.photos');
 const total = photos.length;
@@ -192,7 +176,6 @@ carousel();
 
 
 //Section Datatable
-
 let lignes = document.querySelectorAll("#datatable table tr");
 let prix= [];
 let montants = [];
@@ -263,7 +246,7 @@ for(let i= 1; i<lignes.length - 1 ;i++){
     }
 }
 
-
+//Pour la partie graphe du section datatable
 const ctx =document.getElementById("monGraphe");
 const graphique = new Chart(ctx, {
     type: "bar" ,

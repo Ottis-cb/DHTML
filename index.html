@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--Le Slidebar ou barre de navigation-->
     <div class="slides">
         <div class="slidebar">
             <h2>DHTML</h2>
             <nav>
                 <ul> 
-                    <li onclick="afficherPage('acceuil')"><img src="/Icon/maison.png" alt="">Acceuil</li>
+                    <li onclick="afficherPage('acceuil')"><img src="/Icon/maison.png" alt="">Acceuille</li>
                     <li onclick="afficherPage('cramer')"><img src="/Icon/calculatrice.png" alt="">Cramer</li>
                     <li onclick="afficherPage('image')"><img src="/Icon/inserer-une-icone-dimage.png" alt="">Image</li>
                     <li onclick="afficherPage('panneau')"><img src="/Icon/moniteur.png" alt="">Panneau</a></li>
@@ -24,6 +25,8 @@
     <img class="hamburger" src="/images/menu-hamburger-svgrepo-com.svg" alt="image du menu hamburger">
     
     <main>
+
+        <!--Section Acceuille-->
         <section id="acceuil" class="page">
             <h1>Bienvenue</h1>
             <p>Séléctionner une fonctionnalité dans le menu pour commencer.</p>
@@ -31,13 +34,13 @@
             <div class="cards">
             
                 <div class="card" onclick="afficherPage('cramer')">
-                    <img src="/Icon/calculatrice (1).png" alt="">
+                    <img src="/Icon/calculatrice (1).png" alt="Logo Calculatrice">
                     <h3>Cramer</h3>
                     <p>Résolution d'un système de 3 équations.</p>
                 </div>
             
                 <div class="card" onclick="afficherPage('image')">
-                    <img src="/Icon/images (1).png" alt="">
+                    <img src="/Icon/images (1).png" alt="Logo image">
                     <h3>Image</h3>
                     <p>Redimensionnement dynamique.</p>
                 </div>
@@ -49,7 +52,7 @@
                 </div>
             
                 <div class="card" onclick="afficherPage('datatable')">
-                    <img src="/Icon/charte-de-croissance (1).png" alt="">
+                    <img src="/Icon/charte-de-croissance (1).png" alt="Logo d'un graphe">
                     <h3>Datatable</h3>
                     <p>Gestion des produits.</p>
                 </div>
@@ -72,98 +75,99 @@
             <footer class="footer-page">
                 <div class="footer-c">
                     <p>2026 - Projet DHTML</p>
-                    <p>Dévellopé par <strong>FIDIMANJAKASOA Ottis</strong> | <strong>RALANTONIAINA Sitraka</strong></p>
-                    <p class="version">Version 1.0 - Touss droits réservés</p>
+                    <p>Dévellopé par <strong>FIDIMANJAKASOA Ottis</strong> | <strong>RALANTONOMENJANAHARY Haja Sitrakiniaina</strong></p>
+                    <p class="version">Version 1.0 - Tous droits réservés</p>
                 </div>
             </footer>
         </section>
+
+        <!--Section Cramer-->
         <section id="cramer" class="page">
             <div class="calcul">
-                    <div class="titre">
-                        <h2>Solveur <span>Cramer</span></h2>
-                        <p>Système 3x3</p>
+                <div class="titre">
+                    <h2>Solveur <span>Cramer</span></h2>
+                    <p>Système 3x3</p>
+                </div>
+                <div class="description">
+                    Saisissez les coefficients des trois équation. Le système sera résolu par
+                    la <strong>règle de Cramer</strong>
+                </div>
+                <div class="equations">
+                    <div class="equation">
+                        <span class="label">L1</span>
+                        <input type="number" placeholder="a1" id="a1">
+                        <span class="var">x</span> 
+                        <span class="op">+</span>
+                        <input type="number" placeholder="b1" id="b1">
+                        <span class="var">y</span> 
+                        <span class="op">+</span>
+                        <input type="number" placeholder="c1" id="c1">
+                        <span class="var">z</span> 
+                        <span class="op">=</span>
+                        <input type="number" placeholder="d1" id="d1">
                     </div>
-                    <div class="description">
-                        Saisissez les coefficients des trois équation. Le système sera résolu par
-                        la <strong>règle de Cramer</strong>
+                    <div class="equation">
+                        <span class="label">L2</span>
+                        <input type="number" placeholder="a2" id="a2">
+                        <span class="var">x</span> 
+                        <span class="op">+</span>
+                        <input type="number" placeholder="b2" id="b2">
+                        <span class="var">y</span> 
+                        <span class="op">+</span>
+                        <input type="number" placeholder="c2" id="c2">
+                        <span class="var">z</span> 
+                        <span class="op">=</span>
+                        <input type="number" placeholder="d2" id="d2">
                     </div>
-                    <div class="equations">
-                       <div class="equation">
-                            <span class="label">L1</span>
-                            <input type="number" placeholder="a1" id="a1">
-                            <span class="var">x</span> 
-                            <span class="op">+</span>
-                            <input type="number" placeholder="b1" id="b1">
-                            <span class="var">y</span> 
-                            <span class="op">+</span>
-                            <input type="number" placeholder="c1" id="c1">
-                            <span class="var">z</span> 
-                            <span class="op">=</span>
-                            <input type="number" placeholder="d1" id="d1">
-                        </div>
-                        <div class="equation">
-                            <span class="label">L2</span>
-                            <input type="number" placeholder="a2" id="a2">
-                            <span class="var">x</span> 
-                            <span class="op">+</span>
-                            <input type="number" placeholder="b2" id="b2">
-                            <span class="var">y</span> 
-                            <span class="op">+</span>
-                            <input type="number" placeholder="c2" id="c2">
-                            <span class="var">z</span> 
-                            <span class="op">=</span>
-                            <input type="number" placeholder="d2" id="d2">
-                        </div>
-                        <div class="equation">
-                            <span class="label">L1</span>
-                            <input type="number" placeholder="a3" id="a3">
-                            <span class="var">x</span> 
-                            <span class="op">+</span>
-                            <input type="number" placeholder="b3" id="b3">
-                            <span class="var">y</span> 
-                            <span class="op">+</span>
-                            <input type="number" placeholder="c3" id="c3">
-                            <span class="var">z</span> 
-                            <span class="op">=</span>
-                            <input type="number" placeholder="d3" id="d3">
+                    <div class="equation">
+                        <span class="label">L1</span>
+                        <input type="number" placeholder="a3" id="a3">
+                        <span class="var">x</span> 
+                        <span class="op">+</span>
+                        <input type="number" placeholder="b3" id="b3">
+                        <span class="var">y</span> 
+                        <span class="op">+</span>
+                        <input type="number" placeholder="c3" id="c3">
+                        <span class="var">z</span> 
+                        <span class="op">=</span>
+                        <input type="number" placeholder="d3" id="d3">
                     </div> 
-                    </div>
+                </div>
                     
-                    <div class="buttons">
-                        <button class="first" onclick="calculer()">Calculer</button>
-                        <button class="second" onclick="reinitialiser()">Réinitialiser</button>
-                        <button class="third" onclick="exemple()">Exemple</button>
-                    </div>
+                <div class="buttons">
+                    <button class="first" onclick="calculer()">Calculer</button>
+                    <button class="second" onclick="reinitialiser()">Réinitialiser</button>
+                    <button class="third" onclick="exemple()">Exemple</button>
+                </div>
                 
-                    <div class="resultat" id="resultat">
-                        <div class="card">
+                <div class="resultat" id="resultat">
+
+                    <div class="card"> 
+                        <div class="solution">
+                            <p id="X"></p>
+                            <p id="Y"></p>
+                            <p id="Z"></p>
+                        </div>
                             
-                            <div class="solution">
-                                <p id="X"></p>
-                                <p id="Y"></p>
-                                <p id="Z"></p>
-                            </div>
-                            
-                            <div class="texte">
-                                <p id="message"></p>
-                                <p id="D"></p>
-                            </div>
+                        <div class="texte">
+                            <p id="message"></p>
+                            <p id="D"></p>
+                        </div>
                                 
 
-                            <div class="delta">
-                                <p id="DX"></p>
-                                <p id="DY"></p>
-                                <p id="DZ"></p>
-                            </div>
-                            </div>
+                        <div class="delta">
+                            <p id="DX"></p>
+                            <p id="DY"></p>
+                            <p id="DZ"></p>
                         </div>
                     </div>
-                
+                </div>
             </div>
-
+        </div>
         </section>
-        <section id="image" class="page">
 
+        <!--Section Redimentionnement d'image-->
+        <section id="image" class="page">
             <div class="cadre">
 
                 <div class="titre">
@@ -172,7 +176,7 @@
                 </div>
     
                 <div class="photo">
-                    <img src="/IMG_20260708_124229.jpg" alt="" id="photo">
+                    <img src="/IMG_20260708_124229.jpg" alt="Image d'un ordinateur" id="photo">
                 </div>
 
                 <div class="cards">
@@ -204,7 +208,7 @@
            
         </section>
 
-
+        <!--Section Panneau Publicitaire-->
         <section id="panneau" class="page">
            <div class="card">
                 <div class="texte">
@@ -250,10 +254,10 @@
                     <button id="prev">◀</button>
                     <button id="next">▶</button>
                 </div>
-
             </div>
-
         </section>
+
+        <!--Section Datatable-->
         <section id="datatable" class="page">
             <div class="tableau">
                 <table>
@@ -321,6 +325,7 @@
         
     </main>
     
+    <!--Les scripts-->
     <script src="/js/jquery-4.0.0.min.js" ></script>
     <script src="/js/chart.umd.min.js"></script>
     <script src="script.js"></script>
